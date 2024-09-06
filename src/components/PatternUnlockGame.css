@@ -1,0 +1,44 @@
+.unlock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.unlock-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 20px;
+}
+
+.unlock-dot {
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.unlock-dot.active {
+    background-color: #21a1f1;
+}
+
+.shake {
+    animation: shake-animation 0.5s;
+}
+
+@keyframes shake-animation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.game-over {
+    color: red;
+    font-size: 2em;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 20px;
+}
